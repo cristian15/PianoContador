@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ConteoCelulas</string>
+    <string name="recien_nacido">RECIEN NACIDO</string>
+    <string name="ni_os">NIÑOS</string>
+    <string name="_1_12_meses">1 - 12 MESES</string>
+    <string name="_1_4_a_os">1 - 4 AÑOS</string>
+    <string name="_5_16_a_os">5 - 16 AÑOS</string>
+</resources>
