@@ -11,6 +11,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        adultosBtn.setOnClickListener {
+            val const = Intent(this, ConstantesActivity::class.java)
+            startActivity(const)
+        }
         ninosBtn.setOnClickListener{
             val ninos = Intent(this, NinosEdadActivity::class.java)
             startActivity(ninos)
