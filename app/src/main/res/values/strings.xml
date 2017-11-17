@@ -6,4 +6,15 @@
     <string name="_1_4_a_os">1 - 4 AÑOS</string>
     <string name="_5_16_a_os">5 - 16 AÑOS</string>
     <string name="constantes_hematol_gicas">Constantes Hematológicas</string>
+    <string name="sg">Sg</string>
+    <string name="eb">Eb</string>
+    <string name="plus">+</string>
+    <string name="lf">Lf</string>
+    <string name="mn">Mn</string>
+    <string name="jv">Jv</string>
+    <string name="mc">Mc</string>
+    <string name="bs">Bs</string>
+    <string name="total">Total:</string>
+    <string name="eo">Eo</string>
+    <string name="logo">logo</string>
 </resources>

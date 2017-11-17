@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cl.uct.cedest.conteocelulas.ConstantesActivity">
+    tools:context="cl.uct.cedest.conteocelulas.Controller.ConstantesActivity">
 
     <ImageView
         android:id="@+id/logo"

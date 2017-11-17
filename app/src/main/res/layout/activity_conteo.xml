@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cl.uct.cedest.conteocelulas.Controller.ConteoActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/uct_logo"
+        />
+
+    <Button
+        android:id="@+id/eoBtn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="@string/eo"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/bsBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="@string/total"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/totalConteoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/signika_bold"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        tools:text="100" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/bsBtn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="@string/bs"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/eoBtn"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toEndOf="@+id/eoBtn" />
+
+    <Button
+        android:id="@+id/mcBtn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="@string/mc"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bsBtn"
+        app:layout_constraintEnd_toStartOf="@+id/jvBtn"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/totalConteoTxt" />
+
+    <Button
+        android:id="@+id/jvBtn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/signika_bold"
+        android:text="@string/jv"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mcBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mcBtn" />
+
+    <TextView
+        android:id="@+id/eoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/signika_bold"
+        app:layout_constraintStart_toStartOf="@+id/eoBtn"
+        app:layout_constraintTop_toBottomOf="@+id/eoBtn"
+        tools:text="1.8%" />
+
+    <TextView
+        android:id="@+id/bsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/signika_bold"
+        app:layout_constraintStart_toStartOf="@+id/bsBtn"
+        app:layout_constraintTop_toBottomOf="@+id/bsBtn"
+        tools:text="5%" />
+
+    <TextView
+        android:id="@+id/mcTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/signika_bold"
+        app:layout_constraintStart_toStartOf="@+id/mcBtn"
+        app:layout_constraintTop_toBottomOf="@+id/mcBtn"
+        tools:text="0%" />
+
+    <TextView
+        android:id="@+id/jvTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/signika_bold"
+        app:layout_constraintStart_toStartOf="@+id/jvBtn"
+        app:layout_constraintTop_toBottomOf="@+id/jvBtn"
+        tools:text="15%" />
+
+    <Button
+        android:id="@+id/plusMinusBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="@string/plus"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <Button
+        android:id="@+id/ebBtn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="@string/eb"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/sgBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/eoTxt" />
+
+    <Button
+        android:id="@+id/sgBtn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="@string/sg"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toEndOf="@+id/ebBtn"
+        app:layout_constraintTop_toTopOf="@+id/ebBtn" />
+
+    <Button
+        android:id="@+id/lfBtn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="@string/lf"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sgBtn"
+        app:layout_constraintEnd_toStartOf="@+id/mnBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/mnBtn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/signika_bold"
+        android:text="@string/mn"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lfBtn"
+        app:layout_constraintTop_toTopOf="@+id/lfBtn" />
+
+    <TextView
+        android:id="@+id/ebTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/ebBtn"
+        app:layout_constraintTop_toBottomOf="@+id/ebBtn"
+        tools:text="8 [15 %]" />
+
+    <TextView
+        android:id="@+id/sgTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/sgBtn"
+        app:layout_constraintTop_toBottomOf="@+id/sgBtn"
+        tools:text="50 [ 60 %]" />
+
+    <TextView
+        android:id="@+id/lfTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/lfBtn"
+        app:layout_constraintTop_toBottomOf="@+id/lfBtn"
+        tools:text="8 %" />
+
+    <TextView
+        android:id="@+id/mnTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/mnBtn"
+        app:layout_constraintTop_toBottomOf="@+id/mnBtn"
+        tools:text="25.2 %" />
+
+</android.support.constraint.ConstraintLayout>

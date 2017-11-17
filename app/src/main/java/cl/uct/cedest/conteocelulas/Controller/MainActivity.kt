@@ -1,18 +1,27 @@
-package cl.uct.cedest.conteocelulas
+package cl.uct.cedest.conteocelulas.Controller
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import cl.uct.cedest.conteocelulas.Model.Paciente
+import cl.uct.cedest.conteocelulas.R
+import cl.uct.cedest.conteocelulas.Utilities.PACIENTE
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
+
+
+    var paciente = Paciente("",0f,0f,0f)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         adultosBtn.setOnClickListener {
+            paciente.tipo = "adulto"
             val const = Intent(this, ConstantesActivity::class.java)
+            const.putExtra(PACIENTE, paciente)
+
             startActivity(const)
         }
         ninosBtn.setOnClickListener{
