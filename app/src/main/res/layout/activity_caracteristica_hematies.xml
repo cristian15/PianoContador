@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cl.uct.cedest.conteocelulas.Controller.CaracteristicaHematies">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="79dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/uct_logo" />
+
+    <CheckBox
+        android:id="@+id/normocitosisChck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="Normocitosis"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/signika"
+        android:text="Caracteristicas de Hematíes"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="Macrocitosis"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/macocitosis1Chck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/macocitosis1Chck" />
+
+    <CheckBox
+        android:id="@+id/macocitosis1Chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="1+"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/macrocitosis2Chck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/normocitosisChck" />
+
+    <CheckBox
+        android:id="@+id/macrocitosis2Chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/signika_bold"
+        android:text="2+"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/macocitosis1Chck"
+        app:layout_constraintEnd_toStartOf="@+id/macrocitosis3Chck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/macocitosis1Chck" />
+
+    <CheckBox
+        android:id="@+id/macrocitosis3Chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/signika_bold"
+        android:text="3+"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/macrocitosis2Chck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/macrocitosis2Chck" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="Microcitosis"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/microcitosis1Chck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/microcitosis1Chck" />
+
+    <CheckBox
+        android:id="@+id/microcitosis1Chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="1+"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/microcitosis2Chck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/macocitosis1Chck" />
+
+    <CheckBox
+        android:id="@+id/microcitosis2Chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/signika_bold"
+        android:text="2+"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/microcitosis1Chck"
+        app:layout_constraintEnd_toStartOf="@+id/microcitosis3Chck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/microcitosis1Chck" />
+
+    <CheckBox
+        android:id="@+id/microcitosis3Chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/signika_bold"
+        android:text="3+"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/microcitosis2Chck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/microcitosis2Chck" />
+
+    <Button
+        android:id="@+id/continuarBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/signika_bold"
+        android:text="Continuar"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/normocromiaChck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="Normocromía"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/microcitosis1Chck"
+        tools:layout_editor_absoluteX="102dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="Anisocromía"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/anisocromia1Chck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/anisocromia1Chck" />
+
+    <CheckBox
+        android:id="@+id/anisocromia1Chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="1+"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/anisocromia2Chck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/normocromiaChck" />
+
+    <CheckBox
+        android:id="@+id/anisocromia2Chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/signika_bold"
+        android:text="2+"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/anisocromia1Chck"
+        app:layout_constraintEnd_toStartOf="@+id/anisocromia3Chck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/anisocromia1Chck" />
+
+    <CheckBox
+        android:id="@+id/anisocromia3Chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/signika_bold"
+        android:text="3+"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/anisocromia2Chck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/anisocromia2Chck" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="Hipocromía"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/hipocromia1Chck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hipocromia1Chck" />
+
+    <CheckBox
+        android:id="@+id/hipocromia1Chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="1+"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/hipocromia2Chck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/anisocromia1Chck" />
+
+    <CheckBox
+        android:id="@+id/hipocromia2Chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/signika_bold"
+        android:text="2+"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hipocromia1Chck"
+        app:layout_constraintEnd_toStartOf="@+id/hipocromia3Chck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hipocromia1Chck" />
+
+    <CheckBox
+        android:id="@+id/hipocromia3Chck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/signika_bold"
+        android:text="3+"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hipocromia2Chck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/hipocromia2Chck" />
+
+</android.support.constraint.ConstraintLayout>

@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import cl.uct.cedest.conteocelulas.Model.Paciente
 import cl.uct.cedest.conteocelulas.R
-import cl.uct.cedest.conteocelulas.Utilities.PACIENTE
+import cl.uct.cedest.conteocelulas.Utilities.EXTRA_PACIENTE
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
@@ -20,7 +20,8 @@ class MainActivity : BaseActivity() {
         adultosBtn.setOnClickListener {
             paciente.tipo = "adulto"
             val const = Intent(this, ConstantesActivity::class.java)
-            const.putExtra(PACIENTE, paciente)
+            const.putExtra(EXTRA_PACIENTE, paciente)
+
 
             startActivity(const)
         }

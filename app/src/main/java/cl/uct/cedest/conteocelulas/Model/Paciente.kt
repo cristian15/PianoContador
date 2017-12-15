@@ -7,6 +7,7 @@ import android.os.Parcelable
  * Created by Cristian on 16/11/2017.
  */
 class Paciente constructor(var tipo : String, var vcm: Float, var hcm: Float, var chcm: Float) : Parcelable {
+
     constructor(parcel: Parcel) : this(
             parcel.readString(),
             parcel.readFloat(),

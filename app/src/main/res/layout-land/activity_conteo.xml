@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="112dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/logo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/uct_logo" />
+
+    <Button
+        android:id="@+id/resultadoBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/signika_bold"
+        android:text="@string/resultado"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/plusMinusBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="@string/plus"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/signika_bold"
+        android:text="@string/total"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/totalConteoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/signika_bold"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        tools:text="100" />
+
+    <CheckBox
+        android:id="@+id/eritroideChck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/signika"
+        android:text="@string/serie_eritroide"
+        android:textSize="12sp"
+        android:onClick="mostrarEritroide"
+        app:layout_constraintEnd_toStartOf="@+id/plusMinusBtn"
+        app:layout_constraintTop_toTopOf="@+id/moniciticaChck" />
+
+    <CheckBox
+        android:id="@+id/linfoideChck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/signika"
+        android:text="@string/serie_linfoide"
+        android:textSize="12sp"
+        android:onClick="mostrarLinfo"
+        app:layout_constraintStart_toStartOf="@+id/MieloideChck"
+        app:layout_constraintTop_toBottomOf="@+id/MieloideChck" />
+
+    <CheckBox
+        android:id="@+id/moniciticaChck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/signika"
+        android:text="@string/serie_monocitica"
+        android:textSize="12sp"
+        android:onClick="mostrarMonocitica"
+        app:layout_constraintStart_toEndOf="@+id/MieloideChck"
+        app:layout_constraintTop_toTopOf="@+id/MieloideChck" />
+
+    <CheckBox
+        android:id="@+id/MieloideChck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:checked="false"
+        android:fontFamily="@font/signika"
+        android:text="@string/serie_mieloide"
+        android:textSize="12sp"
+        android:onClick="mostrarMielo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/megatocriticaChck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/signika"
+        android:text="@string/serie_megatocritica"
+        android:textSize="12sp"
+        android:onClick="mostrarMegacario"
+        app:layout_constraintStart_toEndOf="@+id/linfoideChck"
+        app:layout_constraintTop_toTopOf="@+id/linfoideChck" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="214dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/botonesTable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableLayout
+                        android:id="@+id/eoTable"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/eoBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/eo"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/eoTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/signika"
+                                tools:text="1.8%" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/bsTable"
+                        android:layout_width="100dp"
+                        android:layout_height="70dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/bsBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/bs"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/bsTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/signika"
+                                tools:text="5%" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/jvTable"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/jvBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/jv"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/jvTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/signika"
+                                tools:text="15%" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/mcTable"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/mcBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/mc"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/mcTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/signika"
+                                tools:text="0%" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/sgTable"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/sgBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/sg"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/sgTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/signika"
+                                tools:text="50 [ 60 %]" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/ebTable"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/ebBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/eb"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/ebTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/signika"
+                                tools:text="8 [15 %]" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:id="@+id/lfTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/lfBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/lf"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/lfTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                tools:text="8 %" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/mnTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/mnBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/mn"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/mnTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                tools:text="25.2 %" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/promTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/promBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/prom"
+                                android:textSize="18sp"
+                                android:visibility="visible" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/promTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                android:visibility="visible"
+                                tools:text="7 [2%]" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/mieloTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/mieloBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/mielo"
+                                android:textSize="18sp"
+                                android:visibility="visible" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/mieloTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                android:visibility="visible"
+                                tools:text="9 [15%]" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/linfoTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/linfoBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/linfo"
+                                android:textSize="18sp"
+                                android:visibility="visible" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/linfoTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                android:visibility="visible"
+                                tools:text="6 [15%]" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/linfoReacTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/linfoReacBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:padding="0dp"
+                                android:text="@string/linfo_reac"
+                                android:textSize="12sp"
+                                android:visibility="visible" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/linfoReacTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                android:visibility="visible"
+                                tools:text="52 [25%]" />
+                        </TableRow>
+                    </TableLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:id="@+id/prolinTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/prolinBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/prolin"
+                                android:textSize="16sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/prolinTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                tools:text="8% [" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/monoTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/monoBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/mono"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/monoTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                tools:text="50%" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/promoTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/promoBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:text="@string/promo"
+                                android:textSize="18sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/promoTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                tools:text="8%" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/McarioblastoTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/megacarioblastoBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:padding="0dp"
+                                android:text="@string/mcariobl"
+                                android:textSize="12sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/megacarioblastoTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                tools:text="10%" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/McariocitoTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/megacariocitoBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:padding="0dp"
+                                android:text="@string/mcarioci"
+                                android:textSize="12sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/megacariocitoTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                tools:text="85%" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/MiMcariocitoTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/micromegacariocitoBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:padding="0dp"
+                                android:text="@string/mimcarioci"
+                                android:textSize="12sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/micrimegacariocitoTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                tools:text="95%" />
+                        </TableRow>
+                    </TableLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:id="@+id/MicroMegaCarioBLTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/microMegaCarioBlBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:padding="0dp"
+                                android:text="@string/mimcariobl"
+                                android:textSize="12sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/microMegaCarioBlastoTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                tools:text="5%" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/eritoBasofiloTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/eritoBasofiloBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:padding="0dp"
+                                android:text="@string/eritobl_bs"
+                                android:textAlignment="center"
+                                android:textSize="12sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/eritoBasofiloTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                tools:text="55%" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/eritoBlOrtoTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <Button
+                                android:id="@+id/eritoBlOrtoBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:padding="0dp"
+                                android:text="@string/eritobl_ortocr"
+                                android:textSize="12sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/eritoOrtoCromaTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                android:textSize="12sp"
+                                tools:text="8%" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/eritoBLPoliCrTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/eritoBlPoliCrBtn"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika_bold"
+                                android:padding="0dp"
+                                android:text="@string/eritobl_policr"
+                                android:textSize="12sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/eritoPoliCroTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/signika"
+                                android:textAlignment="center"
+                                android:textSize="12sp"
+                                tools:text="[5%]" />
+                        </TableRow>
+                    </TableLayout>
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

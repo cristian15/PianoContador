@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="cl.uct.cedest.conteocelulas">
 
     <application
@@ -22,9 +23,20 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".Controller.ConstantesActivity" />
-        <activity android:name=".Controller.ConteoActivity" />
-        <activity android:name=".Controller.BaseActivity"></activity>
+        <activity
+            android:name=".Controller.ConstantesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Controller.ConteoActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Controller.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Controller.AtlasActivity" />
+        <activity android:name=".Controller.CaracteristicaMain" />
+        <activity android:name=".Controller.CaracteristicaPlaqueta" />
+        <activity android:name=".Controller.CaracteristicaLeucocitos" />
+        <activity android:name=".Controller.CaracteristicaHematies"></activity>
     </application>
 
 </manifest>
