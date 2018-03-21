@@ -481,7 +481,7 @@ class ConteoActivity : BaseActivity() {
         }
 
         resultadoBtn.setOnClickListener {
-            if(conteo.total == 100 ){
+            if(conteo.total == 10 ){
                 val caracte = Intent(this, CaracteristicaMain::class.java)
                 caracte.putExtra(EXTRA_CONTEO, conteo)
                 startActivity(caracte)

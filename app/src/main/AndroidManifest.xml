@@ -36,7 +36,8 @@
         <activity android:name=".Controller.CaracteristicaMain" />
         <activity android:name=".Controller.CaracteristicaPlaqueta" />
         <activity android:name=".Controller.CaracteristicaLeucocitos" />
-        <activity android:name=".Controller.CaracteristicaHematies"></activity>
+        <activity android:name=".Controller.CaracteristicaHematies" />
+        <activity android:name=".Controller.ResultadoFinalActivity"></activity>
     </application>
 
 </manifest>

@@ -5,23 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="112dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="@string/logo"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/uct_logo" />
-
     <Button
         android:id="@+id/resultadoBtn"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:background="@color/colorAccent"
         android:fontFamily="@font/signika_bold"
         android:text="@string/resultado"
@@ -35,12 +23,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.59" />
 
     <Button
         android:id="@+id/plusMinusBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="67dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/signika_bold"
@@ -54,12 +42,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="12dp"
         android:fontFamily="@font/signika_bold"
         android:text="@string/total"
         android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+        app:layout_constraintTop_toBottomOf="@+id/eritroideChck" />
 
     <TextView
         android:id="@+id/totalConteoTxt"
@@ -76,12 +63,12 @@
         android:id="@+id/eritroideChck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp"
         android:fontFamily="@font/signika"
+        android:onClick="mostrarEritroide"
         android:text="@string/serie_eritroide"
         android:textSize="12sp"
-        android:onClick="mostrarEritroide"
-        app:layout_constraintEnd_toStartOf="@+id/plusMinusBtn"
+        app:layout_constraintStart_toEndOf="@+id/moniciticaChck"
         app:layout_constraintTop_toTopOf="@+id/moniciticaChck" />
 
     <CheckBox
@@ -90,9 +77,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/signika"
+        android:onClick="mostrarLinfo"
         android:text="@string/serie_linfoide"
         android:textSize="12sp"
-        android:onClick="mostrarLinfo"
         app:layout_constraintStart_toStartOf="@+id/MieloideChck"
         app:layout_constraintTop_toBottomOf="@+id/MieloideChck" />
 
@@ -102,9 +89,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/signika"
+        android:onClick="mostrarMonocitica"
         android:text="@string/serie_monocitica"
         android:textSize="12sp"
-        android:onClick="mostrarMonocitica"
         app:layout_constraintStart_toEndOf="@+id/MieloideChck"
         app:layout_constraintTop_toTopOf="@+id/MieloideChck" />
 
@@ -116,9 +103,9 @@
         android:layout_marginTop="8dp"
         android:checked="false"
         android:fontFamily="@font/signika"
+        android:onClick="mostrarMielo"
         android:text="@string/serie_mieloide"
         android:textSize="12sp"
-        android:onClick="mostrarMielo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -128,9 +115,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/signika"
+        android:onClick="mostrarMegacario"
         android:text="@string/serie_megatocritica"
         android:textSize="12sp"
-        android:onClick="mostrarMegacario"
         app:layout_constraintStart_toEndOf="@+id/linfoideChck"
         app:layout_constraintTop_toTopOf="@+id/linfoideChck" />
 
@@ -138,23 +125,27 @@
         android:layout_width="0dp"
         android:layout_height="214dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <TableLayout
                 android:id="@+id/botonesTable"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:paddingLeft="20dp">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -162,7 +153,7 @@
 
                     <TableLayout
                         android:id="@+id/eoTable"
-                        android:layout_width="100dp"
+                        android:layout_width="70dp"
                         android:layout_height="match_parent"
                         android:gravity="center_horizontal">
 
@@ -177,7 +168,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/signika_bold"
                                 android:text="@string/eo"
-                                android:textSize="18sp" />
+                                android:textSize="12sp" />
                         </TableRow>
 
                         <TableRow
@@ -198,8 +189,8 @@
 
                     <TableLayout
                         android:id="@+id/bsTable"
-                        android:layout_width="100dp"
-                        android:layout_height="70dp">
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent">
 
                         <TableRow
                             android:layout_width="match_parent"
@@ -212,7 +203,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/signika_bold"
                                 android:text="@string/bs"
-                                android:textSize="18sp" />
+                                android:textSize="12sp" />
                         </TableRow>
 
                         <TableRow
@@ -233,7 +224,7 @@
 
                     <TableLayout
                         android:id="@+id/jvTable"
-                        android:layout_width="100dp"
+                        android:layout_width="70dp"
                         android:layout_height="match_parent">
 
                         <TableRow
@@ -247,7 +238,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/signika_bold"
                                 android:text="@string/jv"
-                                android:textSize="18sp" />
+                                android:textSize="12sp" />
                         </TableRow>
 
                         <TableRow
@@ -268,7 +259,7 @@
 
                     <TableLayout
                         android:id="@+id/mcTable"
-                        android:layout_width="100dp"
+                        android:layout_width="70dp"
                         android:layout_height="match_parent">
 
                         <TableRow
@@ -282,7 +273,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/signika_bold"
                                 android:text="@string/mc"
-                                android:textSize="18sp" />
+                                android:textSize="12sp" />
                         </TableRow>
 
                         <TableRow
@@ -303,7 +294,7 @@
 
                     <TableLayout
                         android:id="@+id/sgTable"
-                        android:layout_width="100dp"
+                        android:layout_width="70dp"
                         android:layout_height="match_parent">
 
                         <TableRow
@@ -317,7 +308,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/signika_bold"
                                 android:text="@string/sg"
-                                android:textSize="18sp" />
+                                android:textSize="12sp" />
                         </TableRow>
 
                         <TableRow
@@ -338,7 +329,7 @@
 
                     <TableLayout
                         android:id="@+id/ebTable"
-                        android:layout_width="100dp"
+                        android:layout_width="70dp"
                         android:layout_height="match_parent">
 
                         <TableRow
@@ -352,7 +343,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/signika_bold"
                                 android:text="@string/eb"
-                                android:textSize="18sp" />
+                                android:textSize="12sp" />
                         </TableRow>
 
                         <TableRow
@@ -393,7 +384,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/signika_bold"
                                 android:text="@string/lf"
-                                android:textSize="18sp" />
+                                android:textSize="12sp" />
                         </TableRow>
 
                         <TableRow
@@ -429,7 +420,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/signika_bold"
                                 android:text="@string/mn"
-                                android:textSize="18sp" />
+                                android:textSize="12sp" />
                         </TableRow>
 
                         <TableRow
@@ -465,7 +456,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/signika_bold"
                                 android:text="@string/prom"
-                                android:textSize="18sp"
+                                android:textSize="12sp"
                                 android:visibility="visible" />
                         </TableRow>
 
@@ -503,7 +494,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/signika_bold"
                                 android:text="@string/mielo"
-                                android:textSize="18sp"
+                                android:textSize="12sp"
                                 android:visibility="visible" />
                         </TableRow>
 
@@ -541,7 +532,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/signika_bold"
                                 android:text="@string/linfo"
-                                android:textSize="18sp"
+                                android:textSize="12sp"
                                 android:visibility="visible" />
                         </TableRow>
 
@@ -657,7 +648,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/signika_bold"
                                 android:text="@string/mono"
-                                android:textSize="18sp" />
+                                android:textSize="12sp" />
                         </TableRow>
 
                         <TableRow

@@ -16,12 +16,10 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         adultosBtn.setOnClickListener {
             paciente.tipo = "adulto"
             val const = Intent(this, ConstantesActivity::class.java)
             const.putExtra(EXTRA_PACIENTE, paciente)
-
 
             startActivity(const)
         }
