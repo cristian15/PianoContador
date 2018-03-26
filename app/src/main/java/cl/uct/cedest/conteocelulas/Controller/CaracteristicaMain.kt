@@ -14,6 +14,14 @@ import kotlinx.android.synthetic.main.activity_caracteristica_main.*
 
 class CaracteristicaMain : BaseActivity() {
 
+    var plaquetas = CaracteristicaPlaquetas(0,0,0,0)
+    var leucocitos = cl.uct.cedest.conteocelulas.Model.CaracteristicaLeucocitos("");
+
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(EXTRA_PLAQUETAS, plaquetas)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +29,17 @@ class CaracteristicaMain : BaseActivity() {
 
         val conteo = intent.getParcelableExtra<Conteo>(EXTRA_CONTEO)
         val hematies = intent.getParcelableExtra<cl.uct.cedest.conteocelulas.Model.CaracteristicaHematies>(EXTRA_HEMATIES)
-        val leucocitos = intent.getParcelableExtra<cl.uct.cedest.conteocelulas.Model.CaracteristicaLeucocitos>(EXTRA_LEUCOCITOS)
-        val plaquetas = intent.getParcelableExtra<CaracteristicaPlaquetas>(EXTRA_PLAQUETAS)
+        if(intent.getParcelableExtra<cl.uct.cedest.conteocelulas.Model.CaracteristicaLeucocitos>(EXTRA_LEUCOCITOS) != null){
+            leucocitos = intent.getParcelableExtra<cl.uct.cedest.conteocelulas.Model.CaracteristicaLeucocitos>(EXTRA_LEUCOCITOS)
+        }
+        if (intent.getParcelableExtra<CaracteristicaPlaquetas>(EXTRA_PLAQUETAS) != null){
+            plaquetas = intent.getParcelableExtra<CaracteristicaPlaquetas>(EXTRA_PLAQUETAS)
+        }
 
 
+
+        println("Plaquetas!!!!!!!!!!!!!!!!!!!!!!!!!!!!!:"+plaquetas.aumentadas);
+        println("LEUCO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!:"+leucocitos.caracteristica);
 
         hematiesBtn.setOnClickListener{
             val hemat = Intent(this,CaracteristicaHematies::class.java)
@@ -51,6 +66,14 @@ class CaracteristicaMain : BaseActivity() {
             leuco.putExtra(EXTRA_CONTEO, conteo)
 
             startActivity(leuco)
+        }
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if(savedInstanceState != null){
+            plaquetas = savedInstanceState.getParcelable(EXTRA_PLAQUETAS)
+
         }
     }
 }

@@ -55,13 +55,13 @@
         android:fontFamily="@font/signika_bold"
         android:text="Macrocitosis"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/macocitosis1Chck"
+        app:layout_constraintEnd_toStartOf="@+id/macrocitosis1Chck"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/macocitosis1Chck" />
+        app:layout_constraintTop_toTopOf="@+id/macrocitosis1Chck" />
 
     <CheckBox
-        android:id="@+id/macocitosis1Chck"
+        android:id="@+id/macrocitosis1Chck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -80,10 +80,10 @@
         android:fontFamily="@font/signika_bold"
         android:text="2+"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/macocitosis1Chck"
+        app:layout_constraintBottom_toBottomOf="@+id/macrocitosis1Chck"
         app:layout_constraintEnd_toStartOf="@+id/macrocitosis3Chck"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/macocitosis1Chck" />
+        app:layout_constraintStart_toEndOf="@+id/macrocitosis1Chck" />
 
     <CheckBox
         android:id="@+id/macrocitosis3Chck"
@@ -121,7 +121,7 @@
         app:layout_constraintEnd_toStartOf="@+id/microcitosis2Chck"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView18"
-        app:layout_constraintTop_toBottomOf="@+id/macocitosis1Chck" />
+        app:layout_constraintTop_toBottomOf="@+id/macrocitosis1Chck" />
 
     <CheckBox
         android:id="@+id/microcitosis2Chck"
