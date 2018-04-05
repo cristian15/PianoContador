@@ -74,8 +74,11 @@ class ConteoActivity : BaseActivity() {
            playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.eosinofilo++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.eosinofilo++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.eosinofilo > 0){
@@ -93,8 +96,11 @@ class ConteoActivity : BaseActivity() {
         bsBtn.setOnClickListener {
             playSound(R.raw.bs)
             if(operacion == "+"){
-                conteo.total++
-                conteo.basofilo++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.basofilo++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.basofilo > 0){
@@ -112,8 +118,11 @@ class ConteoActivity : BaseActivity() {
         mcBtn.setOnClickListener {
             playSound(R.raw.mc)
             if(operacion == "+"){
-                conteo.total++
-                conteo.mielocitos++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.mielocitos++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.mielocitos > 0){
@@ -131,8 +140,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.jv)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.juveniles++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.juveniles++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.juveniles > 0){
@@ -150,8 +162,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eb)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.baciliforme++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.baciliforme++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.baciliforme > 0){
@@ -169,8 +184,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.sg)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.segmentados++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.segmentados++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.segmentados > 0){
@@ -188,8 +206,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.lf)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.linfocitos++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.linfocitos++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.linfocitos > 0){
@@ -207,8 +228,11 @@ class ConteoActivity : BaseActivity() {
            playSound(R.raw.mn)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.monocito++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.monocito++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.monocito > 0){
@@ -226,8 +250,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.promielocito++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.promielocito++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.promielocito > 0){
@@ -245,8 +272,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.mieloblasto++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.mieloblasto++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.mieloblasto > 0){
@@ -264,8 +294,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.linfoblastos++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.linfoblastos++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.linfoblastos > 0){
@@ -283,8 +316,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.linfocitoReactivo++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.linfocitoReactivo++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.linfocitoReactivo > 0){
@@ -302,8 +338,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.prolinfocito++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.prolinfocito++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.prolinfocito > 0){
@@ -321,8 +360,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.monoblasto++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.monoblasto++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.monoblasto > 0){
@@ -340,8 +382,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.promonocito++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.promonocito++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.promonocito > 0){
@@ -359,8 +404,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.megacarioblasto++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.megacarioblasto++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.megacarioblasto > 0){
@@ -378,8 +426,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.megacariocito++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.megacariocito++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.megacariocito > 0){
@@ -397,8 +448,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.micromegacariocito++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.micromegacariocito++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.micromegacariocito > 0){
@@ -416,8 +470,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.micromegacarioblasto++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.micromegacarioblasto++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.micromegacarioblasto > 0){
@@ -435,8 +492,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.eritoblastoBasofilo++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.eritoblastoBasofilo++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.eritoblastoBasofilo > 0){
@@ -454,8 +514,10 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.eritoblastoOrtocromatico++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.eritoblastoOrtocromatico++
+                }
             }
             else{
                 if (conteo.total>0 && conteo.eritoblastoOrtocromatico > 0){
@@ -473,8 +535,11 @@ class ConteoActivity : BaseActivity() {
             playSound(R.raw.eo)
 
             if(operacion == "+"){
-                conteo.total++
-                conteo.eritoblastoPolicromatico++
+                if (conteo.total < TOTAL_CUENTA){
+                    conteo.total++
+                    conteo.eritoblastoPolicromatico++
+                }
+
             }
             else{
                 if (conteo.total>0 && conteo.eritoblastoPolicromatico > 0){
@@ -489,7 +554,7 @@ class ConteoActivity : BaseActivity() {
         }
 
         resultadoBtn.setOnClickListener {
-            if(conteo.total == 10 ){
+            if(conteo.total == TOTAL_CUENTA ){
                 val caracte = Intent(this, CaracteristicaMain::class.java)
                 caracte.putExtra(EXTRA_CONTEO, conteo)
                 caracte.putExtra(EXTRA_PACIENTE, paciente)
@@ -511,9 +576,10 @@ class ConteoActivity : BaseActivity() {
 
     private fun calculaTotales(){
 
+
         totalConteoTxt.text = conteo.total.toString()
 
-        if (conteo.total >0){
+        if (conteo.total  > 0 ){
 
             val totalEo =  conteo.eosinofilo*100/conteo.total
             eoTxt.text = "${conteo.eosinofilo} [$totalEo %]"

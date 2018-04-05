@@ -3,6 +3,7 @@ package cl.uct.cedest.conteocelulas.Controller
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Environment
 import cl.uct.cedest.conteocelulas.Model.CaracteristicaHematies
 import cl.uct.cedest.conteocelulas.Model.CaracteristicaLeucocitos
 import cl.uct.cedest.conteocelulas.Model.CaracteristicaPlaquetas
@@ -10,7 +11,12 @@ import cl.uct.cedest.conteocelulas.Model.Conteo
 import cl.uct.cedest.conteocelulas.Model.Paciente
 import cl.uct.cedest.conteocelulas.R
 import cl.uct.cedest.conteocelulas.Utilities.*
+import com.itextpdf.text.Document
+import com.itextpdf.text.Paragraph
+import com.itextpdf.text.pdf.PdfWriter
 import kotlinx.android.synthetic.main.activity_resultado_final.*
+import java.io.FileOutputStream
+
 
 class ResultadoFinalActivity : BaseActivity() {
 
@@ -21,6 +27,7 @@ class ResultadoFinalActivity : BaseActivity() {
         initResultadosPacienteCaracteristicas()
 
         intiResultadoConteo()
+        toPDF()
 
     }
 
@@ -86,4 +93,24 @@ class ResultadoFinalActivity : BaseActivity() {
         linfocitosConteoTxt.setText("${conteo.linfocitos}%")
         monocitosConteoTxt.setText("${conteo.monocito}%")
     }
+
+    fun toPDF(){
+
+        var document = Document()
+        var file = Environment.getExternalStorageDirectory().path + "/hola.pdf"
+
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!$file")
+
+        PdfWriter.getInstance(document,FileOutputStream(file))
+
+        //PdfWriter.getInstance(document,new FileOutputStream(file));
+        document.open();
+        var p = Paragraph("HOLA HOLA HOLA")
+        document.add(p);
+        document.close();
+
+
+
+    }
+
 }
