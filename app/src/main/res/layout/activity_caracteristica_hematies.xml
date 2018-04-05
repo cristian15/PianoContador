@@ -148,7 +148,7 @@
         app:layout_constraintStart_toEndOf="@+id/microcitosis2Chck" />
 
     <Button
-        android:id="@+id/continuarBtn"
+        android:id="@+id/continuarHematiesBtn"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import cl.uct.cedest.conteocelulas.Model.Conteo
+import cl.uct.cedest.conteocelulas.Model.Paciente
 import cl.uct.cedest.conteocelulas.R
 import cl.uct.cedest.conteocelulas.Utilities.EXTRA_CONTEO
+import cl.uct.cedest.conteocelulas.Utilities.EXTRA_PACIENTE
 import cl.uct.cedest.conteocelulas.Utilities.TOTAL_CUENTA
 import kotlinx.android.synthetic.main.activity_conteo.*
 
@@ -22,15 +24,21 @@ class ConteoActivity : BaseActivity() {
             ,0,0,0,0,0,0
             ,0,0,0)
 
+    var paciente = Paciente("",0,0f,0f,0f,0f)
 
     override fun onSaveInstanceState(outState: Bundle?) {
         super.onSaveInstanceState(outState)
         outState?.putParcelable(EXTRA_CONTEO, conteo)
+        outState?.putParcelable(EXTRA_PACIENTE, paciente)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_conteo)
+
+        paciente = intent.getParcelableExtra(EXTRA_PACIENTE)
+
+        println("PACIENTE!!!!!!!!!!!!!:  ${paciente.tipo} *** ${paciente.hcm}")
 
         mieloTable.visibility =  View.INVISIBLE
         promTable.visibility = View.INVISIBLE
@@ -484,6 +492,7 @@ class ConteoActivity : BaseActivity() {
             if(conteo.total == 10 ){
                 val caracte = Intent(this, CaracteristicaMain::class.java)
                 caracte.putExtra(EXTRA_CONTEO, conteo)
+                caracte.putExtra(EXTRA_PACIENTE, paciente)
                 startActivity(caracte)
             }
         }
@@ -495,6 +504,7 @@ class ConteoActivity : BaseActivity() {
         super.onRestoreInstanceState(savedInstanceState)
         if(savedInstanceState != null){
             conteo = savedInstanceState.getParcelable(EXTRA_CONTEO)
+            paciente = savedInstanceState.getParcelable(EXTRA_PACIENTE)
             calculaTotales()
         }
     }

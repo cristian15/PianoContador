@@ -6,10 +6,12 @@ import android.os.Parcelable
 /**
  * Created by Cristian on 16/11/2017.
  */
-class Paciente constructor(var tipo : String, var vcm: Float, var hcm: Float, var chcm: Float) : Parcelable {
+class Paciente constructor(var tipo : String,var edad: Int, var vcm: Float, var hcm: Float, var chcm: Float, var ede: Float) : Parcelable {
 
     constructor(parcel: Parcel) : this(
             parcel.readString(),
+            parcel.readInt(),
+            parcel.readFloat(),
             parcel.readFloat(),
             parcel.readFloat(),
             parcel.readFloat()) {
@@ -17,9 +19,11 @@ class Paciente constructor(var tipo : String, var vcm: Float, var hcm: Float, va
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(tipo)
+        parcel.writeInt(edad)
         parcel.writeFloat(vcm)
         parcel.writeFloat(hcm)
         parcel.writeFloat(chcm)
+        parcel.writeFloat(ede)
     }
 
     override fun describeContents(): Int {

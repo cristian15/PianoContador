@@ -10,8 +10,12 @@ class CaracteristicaHematies constructor( var anisocitosis: Int
                                           , var macrocitosis: Int
                                           , var microcitosis: Int
                                           , var anisocromia: Int
-                                          , var hipocromia: Int) : Parcelable {
+                                          , var hipocromia: Int
+                                          , var normocitosis: Int
+                                          , var normocromia: Int) : Parcelable {
     constructor(parcel: Parcel) : this(
+            parcel.readInt(),
+            parcel.readInt(),
             parcel.readInt(),
             parcel.readInt(),
             parcel.readInt(),
@@ -25,6 +29,8 @@ class CaracteristicaHematies constructor( var anisocitosis: Int
         parcel.writeInt(microcitosis)
         parcel.writeInt(anisocromia)
         parcel.writeInt(hipocromia)
+        parcel.writeInt(normocitosis)
+        parcel.writeInt(normocromia)
     }
 
     override fun describeContents(): Int {

@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : BaseActivity() {
 
 
-    var paciente = Paciente("",0f,0f,0f)
+    var paciente = Paciente("",0,0f,0f,0f,0f)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +24,10 @@ class MainActivity : BaseActivity() {
             startActivity(const)
         }
         ninosBtn.setOnClickListener{
+            paciente.tipo="niño"
             val ninos = Intent(this, NinosEdadActivity::class.java)
+            ninos.putExtra(EXTRA_PACIENTE,paciente)
+
             startActivity(ninos)
         }
     }

@@ -41,13 +41,13 @@
         android:fontFamily="@font/signika_bold"
         android:text="VCM:"
         android:textSize="36sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
+        app:layout_constraintEnd_toStartOf="@+id/vcmTxt"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText" />
+        app:layout_constraintTop_toTopOf="@+id/vcmTxt" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/vcmTxt"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -71,13 +71,13 @@
         android:fontFamily="@font/signika_bold"
         android:text="HCM:"
         android:textSize="36sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintEnd_toStartOf="@+id/hcmTxt"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText2" />
+        app:layout_constraintTop_toTopOf="@+id/hcmTxt" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/hcmTxt"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -90,7 +90,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView7"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/vcmTxt" />
 
     <TextView
         android:id="@+id/textView4"
@@ -101,13 +101,13 @@
         android:fontFamily="@font/signika_bold"
         android:text="CHCM:"
         android:textSize="36sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText3"
+        app:layout_constraintEnd_toStartOf="@+id/chcmTxt"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText3" />
+        app:layout_constraintTop_toTopOf="@+id/chcmTxt" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/chcmTxt"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -120,7 +120,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView9"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/hcmTxt" />
 
     <Button
         android:id="@+id/siguienteBtn"
@@ -142,12 +142,12 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/signika"
-        android:text="TextView"
+        android:text="[fL]"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintBottom_toBottomOf="@+id/vcmTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintStart_toEndOf="@+id/vcmTxt"
         tools:text="[fL]" />
 
     <TextView
@@ -157,12 +157,12 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/signika"
-        android:text="TextView"
+        android:text="[pg]"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editText2"
+        app:layout_constraintBottom_toBottomOf="@+id/hcmTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText2"
+        app:layout_constraintStart_toEndOf="@+id/hcmTxt"
         tools:text="[pg]" />
 
     <TextView
@@ -174,10 +174,10 @@
         android:fontFamily="@font/signika"
         android:text="[%]"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editText3"
+        app:layout_constraintBottom_toBottomOf="@+id/chcmTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText3" />
+        app:layout_constraintStart_toEndOf="@+id/chcmTxt" />
 
     <TextView
         android:id="@+id/textView10"
@@ -187,13 +187,13 @@
         android:fontFamily="@font/signika_bold"
         android:text="EDE:"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editText5"
-        app:layout_constraintEnd_toStartOf="@+id/editText5"
+        app:layout_constraintBottom_toBottomOf="@+id/edeTxt"
+        app:layout_constraintEnd_toStartOf="@+id/edeTxt"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/edeTxt"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -206,7 +206,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView11"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/chcmTxt" />
 
     <TextView
         android:id="@+id/textView11"
@@ -217,9 +217,9 @@
         android:fontFamily="@font/signika"
         android:text="[%]"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editText5"
+        app:layout_constraintBottom_toBottomOf="@+id/edeTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText5" />
+        app:layout_constraintStart_toEndOf="@+id/edeTxt" />
 
 </android.support.constraint.ConstraintLayout>

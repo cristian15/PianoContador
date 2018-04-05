@@ -6,11 +6,9 @@ import android.os.Bundle
 import cl.uct.cedest.conteocelulas.Model.CaracteristicaLeucocitos
 import cl.uct.cedest.conteocelulas.Model.CaracteristicaPlaquetas
 import cl.uct.cedest.conteocelulas.Model.Conteo
+import cl.uct.cedest.conteocelulas.Model.Paciente
 import cl.uct.cedest.conteocelulas.R
-import cl.uct.cedest.conteocelulas.Utilities.EXTRA_CONTEO
-import cl.uct.cedest.conteocelulas.Utilities.EXTRA_HEMATIES
-import cl.uct.cedest.conteocelulas.Utilities.EXTRA_LEUCOCITOS
-import cl.uct.cedest.conteocelulas.Utilities.EXTRA_PLAQUETAS
+import cl.uct.cedest.conteocelulas.Utilities.*
 import kotlinx.android.synthetic.main.activity_caracteristica_leucocitos.*
 
 class CaracteristicaLeucocitos : BaseActivity() {
@@ -27,6 +25,7 @@ class CaracteristicaLeucocitos : BaseActivity() {
         setContentView(R.layout.activity_caracteristica_leucocitos)
 
         val conteo = intent.getParcelableExtra<Conteo>(EXTRA_CONTEO)
+        val paciente = intent.getParcelableExtra<Paciente>(EXTRA_PACIENTE)
         val hematies = intent.getParcelableExtra<cl.uct.cedest.conteocelulas.Model.CaracteristicaHematies>(EXTRA_HEMATIES)
         if(intent.getParcelableExtra<cl.uct.cedest.conteocelulas.Model.CaracteristicaLeucocitos>(EXTRA_LEUCOCITOS) != null){
             leucocitos = intent.getParcelableExtra<cl.uct.cedest.conteocelulas.Model.CaracteristicaLeucocitos>(EXTRA_LEUCOCITOS)
@@ -36,11 +35,13 @@ class CaracteristicaLeucocitos : BaseActivity() {
         continuarLeucoBtn.setOnClickListener(){
             leucocitos.caracteristica = caracteristicaTxt.text.toString()
 
+
             val carac = Intent(this, CaracteristicaMain::class.java)
             carac.putExtra(EXTRA_HEMATIES, hematies)
             carac.putExtra(EXTRA_PLAQUETAS, plaquetas)
             carac.putExtra(EXTRA_LEUCOCITOS, leucocitos)
             carac.putExtra(EXTRA_CONTEO, conteo)
+            carac.putExtra(EXTRA_PACIENTE, paciente)
 
             startActivity(carac)
         }
@@ -51,7 +52,10 @@ class CaracteristicaLeucocitos : BaseActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
         super.onRestoreInstanceState(savedInstanceState)
         if(savedInstanceState != null){
-            leucocitos = savedInstanceState.getParcelable(EXTRA_LEUCOCITOS)
+            if (savedInstanceState.getParcelable<CaracteristicaLeucocitos>(EXTRA_LEUCOCITOS) != null){
+                leucocitos = savedInstanceState.getParcelable<CaracteristicaLeucocitos>(EXTRA_LEUCOCITOS)
+            }
+
 
         }
     }
