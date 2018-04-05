@@ -20,11 +20,12 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="344dp"
-        android:layout_height="440dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo">
@@ -54,7 +55,7 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -97,7 +98,7 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView25"
@@ -116,7 +117,7 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView26"
@@ -132,9 +133,10 @@
                         android:fontFamily="@font/signika"
                         tools:text="5.8 [pg]" />
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView27"
@@ -150,9 +152,10 @@
                         android:fontFamily="@font/signika"
                         tools:text=" 25 %" />
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView28"
@@ -182,6 +185,7 @@
                         android:text="Caracteristicas de Celulas"
                         android:textSize="24sp" />
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -195,6 +199,7 @@
                         android:text="Hematies"
                         android:textSize="20sp" />
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -224,6 +229,7 @@
 
                     </LinearLayout>
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -253,6 +259,7 @@
 
                     </LinearLayout>
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -282,6 +289,7 @@
 
                     </LinearLayout>
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -325,6 +333,7 @@
                         android:text="Leucocitos"
                         android:textSize="20sp" />
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -351,6 +360,7 @@
                         android:text="Plaquetas"
                         android:textSize="20sp" />
                 </TableRow>
+
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -433,6 +443,7 @@
 
                     </LinearLayout>
                 </TableRow>
+
                 <TableRow
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal">
@@ -446,6 +457,7 @@
                         android:textAlignment="center"
                         android:textSize="24sp" />
                 </TableRow>
+
                 <TableRow>
 
 
@@ -469,8 +481,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:fontFamily="@font/signika_bold"
-                            tools:text="Conteo"
-                            android:textSize="16sp"/>
+                            android:text="Conteo"
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/normalTitleTxt"
@@ -478,10 +490,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:fontFamily="@font/signika_bold"
-                            tools:text="Normal"
-                            android:textSize="16sp"/>
+                            android:text="Normal"
+                            android:textSize="16sp" />
                     </LinearLayout>
                 </TableRow>
+
                 <TableRow>
 
                     <LinearLayout
@@ -516,6 +529,7 @@
                     </LinearLayout>
                 </TableRow>
 
+
                 <TableRow>
 
                     <LinearLayout
@@ -549,6 +563,212 @@
                             tools:text="0 - 7 %" />
                     </LinearLayout>
                 </TableRow>
+
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/mielocitoCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Mielocitos"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/mielocitoConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalMielocitoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/juvenilesCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Juveniles"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/juvenilesConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalJuvenilesTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/baciliformesCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Baciliformes"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/baciliformesConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalJBaciliformesTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/segmentadosCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Segmentados"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/segmentadosConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalSegmentadosTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/linfocitosCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Linfocitos"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/linfocitosConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalLinfocitosTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/monocitosCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Monocitos"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/monocitosConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalMonocitosTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+
 
             </TableLayout>
 

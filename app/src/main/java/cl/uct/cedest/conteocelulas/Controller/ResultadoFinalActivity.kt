@@ -18,11 +18,13 @@ class ResultadoFinalActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultado_final)
 
-        initResultados()
+        initResultadosPacienteCaracteristicas()
+
+        intiResultadoConteo()
 
     }
 
-    fun  initResultados(){
+    fun  initResultadosPacienteCaracteristicas(){
         val paciente = intent.getParcelableExtra<Paciente>(EXTRA_PACIENTE)
         tipoPacienteTxt.setText(paciente.tipo.capitalize())
         if( !paciente.tipo.equals("adulto")){
@@ -41,10 +43,7 @@ class ResultadoFinalActivity : BaseActivity() {
         edeConsTxt.setText("${paciente.ede} %")
 
 
-        val conteo = intent.getParcelableExtra<Conteo>(EXTRA_CONTEO)
 
-        basofiloConteoTxt.setText("${conteo.basofilo} %")
-        eosinofiloConteoTxt.setText("${conteo.eosinofilo} %")
 
         val plaquetas  = intent.getParcelableExtra<CaracteristicaPlaquetas>(EXTRA_PLAQUETAS)
         val leucocitos = intent.getParcelableExtra<CaracteristicaLeucocitos>(EXTRA_LEUCOCITOS)
@@ -56,8 +55,6 @@ class ResultadoFinalActivity : BaseActivity() {
         macrocitosisTxt.setText("${hematies.macrocitosis}+")
         anisocromiaTxt.setText("${hematies.anisocromia}+")
         hipocromiaTxt.setText("${hematies.hipocromia}+")
-
-
 
         aumentadasTxt.setText("${plaquetas.aumentadas}+")
         disminuidasTxt.setText("${plaquetas.disminuidas}+")
@@ -75,5 +72,18 @@ class ResultadoFinalActivity : BaseActivity() {
         }
 
 
+    }
+
+    fun intiResultadoConteo(){
+        val conteo = intent.getParcelableExtra<Conteo>(EXTRA_CONTEO)
+
+        basofiloConteoTxt.setText("${conteo.basofilo}%")
+        eosinofiloConteoTxt.setText("${conteo.eosinofilo}%")
+        mielocitoConteoTxt.setText("${conteo.mielocitos}%")
+        juvenilesConteoTxt.setText("${conteo.juveniles}%")
+        baciliformesConteoTxt.setText("${conteo.baciliforme}%")
+        segmentadosConteoTxt.setText("${conteo.segmentados}%")
+        linfocitosConteoTxt.setText("${conteo.linfocitos}%")
+        monocitosConteoTxt.setText("${conteo.monocito}%")
     }
 }
