@@ -52,5 +52,28 @@ class ResultadoFinalActivity : BaseActivity() {
 
         leucocitosTxt.setText("${leucocitos.caracteristica}")
 
+        microcitosisTxt.setText("${hematies.microcitosis}+")
+        macrocitosisTxt.setText("${hematies.macrocitosis}+")
+        anisocromiaTxt.setText("${hematies.anisocromia}+")
+        hipocromiaTxt.setText("${hematies.hipocromia}+")
+
+
+
+        aumentadasTxt.setText("${plaquetas.aumentadas}+")
+        disminuidasTxt.setText("${plaquetas.disminuidas}+")
+        if(plaquetas.macroplaquetas==0 && plaquetas.microplaquetas==0){
+            plaquetasCaracTitleTxt.setText("Normales al frotis")
+        }
+        if (plaquetas.macroplaquetas==1){
+            plaquetasCaracTitleTxt.setText("Macroplaquetas")
+        }
+        if (plaquetas.microplaquetas == 1){
+            plaquetasCaracTitleTxt.setText("Microplaquetas")
+        }
+        if (plaquetas.microplaquetas==1 && plaquetas.macroplaquetas==1){
+            plaquetasCaracTitleTxt.setText("Macroplaquetas -  Microplaquetas")
+        }
+
+
     }
 }

@@ -81,14 +81,6 @@ class CaracteristicaPlaqueta : BaseActivity() {
         }
     }
 
-    fun continuarClick(view: View){
-       /* val carac = Intent(this, CaracteristicaMain::class.java)
-        carac.putExtra(EXTRA_HEMATIES, hematies)
-        carac.putExtra(EXTRA_PLAQUETAS, plaquetas)
-        carac.putExtra(EXTRA_CONTEO, conteo)
-
-        startActivity(carac)*/
-    }
 
     fun normalesClick(view: View){
         if(normalesChck.isChecked){
