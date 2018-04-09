@@ -27,7 +27,7 @@ class ResultadoFinalActivity : BaseActivity() {
         initResultadosPacienteCaracteristicas()
 
         intiResultadoConteo()
-        toPDF()
+        //toPDF()
 
     }
 
@@ -92,6 +92,22 @@ class ResultadoFinalActivity : BaseActivity() {
         segmentadosConteoTxt.setText("${conteo.segmentados}%")
         linfocitosConteoTxt.setText("${conteo.linfocitos}%")
         monocitosConteoTxt.setText("${conteo.monocito}%")
+
+        linfoblastoConteoTxt.setText("${conteo.linfoblastos}%")
+        linfocitoReactivoConteoTxt.setText("${conteo.linfocitoReactivo}%")
+        prolinfocitoConteoTxt.setText("${conteo.prolinfocito}%")
+
+        monoblastoConteoTxt.setText("${conteo.monoblasto}%")
+        promonocitoConteoTxt.setText("${conteo.promonocito}%")
+
+        megacarioblastoConteoTxt.setText("${conteo.megacarioblasto}%")
+        megacariocitoConteoTxt.setText("${conteo.megacariocito}%")
+        micromegacariocitoConteoTxt.setText("${conteo.micromegacariocito}%")
+        micromegacarioblastoConteoTxt.setText("${conteo.micromegacarioblasto}%")
+
+        eritroblastoBasofiloConteoTxt.setText("${conteo.eritoblastoBasofilo}%")
+        eritroblastoOrtocromaticoConteoTxt.setText("${conteo.eritoblastoOrtocromatico}%")
+        eritroblastoPolicromaticoConteoTxt.setText("${conteo.eritoblastoPolicromatico}%")
     }
 
     fun toPDF(){

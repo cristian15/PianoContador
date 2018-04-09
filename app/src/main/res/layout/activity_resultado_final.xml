@@ -731,22 +731,67 @@
 
                 <TableRow>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/monocitosCelulaTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/signika"
+                        android:text="Monocitos"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/monocitosConteoTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/signika"
+                        tools:text="15  [10%]" />
+
+                    <TextView
+                        android:id="@+id/normalMonocitosTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/signika"
+                        tools:text="0 - 1 %" />
+                </LinearLayout>
+            </TableRow>
+
+                <TableRow android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/serieLinfoideTitleTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/signika_bold"
+                        android:text="Serie Mieloide"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/monocitosCelulaTxt"
+                            android:id="@+id/promielocitoCelulaTxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:fontFamily="@font/signika"
-                            android:text="Monocitos"
+                            android:text="Promielocito"
                             android:textSize="16sp" />
 
                         <TextView
-                            android:id="@+id/monocitosConteoTxt"
+                            android:id="@+id/promielocitoConteoTxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -754,7 +799,40 @@
                             tools:text="15  [10%]" />
 
                         <TextView
-                            android:id="@+id/normalMonocitosTxt"
+                            android:id="@+id/normalPromielocitoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/mieloblastoCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Mieloblasto"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/mieloblastoConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalMieloblastoTxt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -763,8 +841,450 @@
                     </LinearLayout>
                 </TableRow>
 
+                <TableRow android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/serieMieloideTitleTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/signika_bold"
+                        android:text="Serie Linfoide"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/linfoBlastoCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Linfoblasto"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/linfoblastoConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalLinfoblastoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/linfocitoReactivoCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Linfocitos Reactivos"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/linfocitoReactivoConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normallinfocitoReactivoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/prolinfocitoCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Prolinfocitos"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/prolinfocitoConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalProlinfocitoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/serieMonociticaTitleTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/signika_bold"
+                        android:text="Serie Monocitica"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/monoblastoCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Monoblasto"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/monoblastoConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalMonoblastoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/promonocitoCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Promonocito"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/promonocitoConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalPromonocitoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/serieMegatocriticaTitleTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/signika_bold"
+                        android:text="Serie Megatocritica"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/megacarioblastoCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Megacarioblasto"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/megacarioblastoConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalMegacarioblastoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/megacariocitoCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Megacariocito"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/megacariocitoConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalMegacariocitoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/micromegacariocitoCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Micromegacariocito"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/micromegacariocitoConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalMicromegacariocitoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/micromegacarioblastoCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Micromegacarioblasto"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/micromegacarioblastoConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalMicromegacarioblastoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/serieEritroideTitleTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/signika_bold"
+                        android:text="Serie Eritroide"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/eritroblastoBasofiloCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Eritroblasto Basofilo"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/eritroblastoBasofiloConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalEritroblastoBasofiloTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/eritroblastoOrtocromaticoCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Eritroblasto Ortocromatico"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/eritroblastoOrtocromaticoConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalEritroblastoOrtocromaticoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/eritroblastoPolicromaticoCelulaTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            android:text="Eritroblasto Policromatico"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/eritroblastoPolicromaticoConteoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="15  [10%]" />
+
+                        <TextView
+                            android:id="@+id/normalEritroblastoPolicromaticoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/signika"
+                            tools:text="0 - 1 %" />
+                    </LinearLayout>
+                </TableRow>
 
             </TableLayout>
+
 
         </LinearLayout>
     </ScrollView>

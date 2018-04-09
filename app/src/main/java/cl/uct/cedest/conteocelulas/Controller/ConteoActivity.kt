@@ -78,7 +78,6 @@ class ConteoActivity : BaseActivity() {
                     conteo.total++
                     conteo.eosinofilo++
                 }
-
             }
             else{
                 if (conteo.total>0 && conteo.eosinofilo > 0){

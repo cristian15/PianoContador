@@ -9,7 +9,7 @@ const val EXTRA_HEMATIES = "hematies"
 const val EXTRA_PLAQUETAS = "plaquetas"
 const val EXTRA_LEUCOCITOS = "leucocitos"
 
-const val TOTAL_CUENTA = 10
+const val TOTAL_CUENTA = 100
 
 const val RECUENTO_ADULTO_MIN = 4000
 const val RECUENTO_ADULTO_MAX = 11000
